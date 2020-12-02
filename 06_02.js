@@ -20,20 +20,6 @@ class Group{
 		return this.content.includes(value);
 	}
 
-	equalsTo(group){
-		if(Object.getPrototypeOf(group) != Group.prototype)
-			return false;
-
-		if(this.content.length !== group.content.length)
-			return false;
-
-		for(let element of group)
-			if(!this.has(element))
-				return false;
-
-		return true;
-	}
-
 	static from(iterable){
 		let group = new Group();
 
